@@ -9,43 +9,40 @@
 </head>
 <body>
     <h1>Gataria</h1>
-    <h2>Bem vindo ao Gataria, Seu Site de Busca Por imagens de gatos</h2> 
-    <h3>Escolha como quer a foto do gato</h3>
-    <h4>Cor</h4> 
+    <h2>Wellcome to Gataria, your site to find your favorite cat </h2> 
+    <h3>Find how you want a image!</h3>
+    <h4>Color</h4> 
     
-    <div id = 'divCheckBoxPretoId'>Preto <input type="checkbox"  onclick="corSalva[0] = definirCor('preto')" name="cor" id="corPretoId"></div>
-    <div id = 'divCheckBoxBrancoId'>Branco <input type="checkbox" onclick="corSalva[1] = definirCor('branco')" name="cor" id="corBrancoId"></div>
-    <div id = 'divCheckBoxPeladoId'>Pelado <input type="checkbox" onclick="corSalva[2] = definirCor('pelado')" name="cor" id="corPeladoId"></div>
+    <div id = ''> <input value="Black" type="button"  onclick="corSalva[0] = definirCor('preto')" name="cor" id=""></div>
+    <div id = ''> <input value="White" type="button" onclick="corSalva[1] = definirCor('branco')" name="cor" id=""></div>
+    <div id = ''> <input value="Skin Head" type="button" onclick="corSalva[2] = definirCor('pelado')" name="cor" id=""></div>
     
 
 
-    <h4>Idade</h4>
+    <h4>Age</h4>
     
-    <div id = 'divCheckBoxFilhoteId'>Filhote <input type="checkbox"  onclick="idadeSalva[0] = definirIdade('filhote')" name="idade" id="idadeFilhoteId"> </div>
-    <div id = 'divCheckBoxJovemId'>Jovem <input type="checkbox" onclick="idadeSalva[1] = definirIdade('jovem')" name="idade" id="idadeJovemId"> </div>
-    <div id = 'divCheckBoxAdultoId'>Adulto <input type="checkbox" onclick="idadeSalva[2] = definirIdade('adulto')" name="idade" id="idadeAdultoId"> </div>
+    <div id = ''> <input value="Baby" type="button"  onclick="idadeSalva[0] = definirIdade('filhote')" name="idade" id=""> </div>
+    <div id = ''> <input value="Young" type="button" onclick="idadeSalva[1] = definirIdade('jovem')" name="idade" id=""> </div>
+    <div id = ''> <input value="Senior" type="button" onclick="idadeSalva[2] = definirIdade('adulto')" name="idade" id=""> </div>
     <br>
-    <div id="anuncioId"><input type="button" value="Procurar" onclick="procurar(corSalva, idadeSalva)"> <input type="button" value="Reiniciar" onclick="reiniciar()" ></div>
+    <div id="procurar_reiniciarId"><input type="button" value="Seach" onclick="procurar(corSalva, idadeSalva)"> <input type="button" value="Refresh" onclick="reiniciar()" ></div>
     
 
     <div><img src= "GatoDentroDaCaixa.jpg" alt="" id = 'imagemRespostaId'></div> 
-    <h5>Este projeto é um prototipo, ao longo do tempo com o avanço dos meus estudos irei aprimora-lo ou apenas criar novos e melhores</h5>
+    <h5>This project is a prototype, over time as my studies progress I will improve it or just create new and better ones.</h5>
     
     
     
     <script>
         var corSalva = []
         var idadeSalva = []
+
         var imagemResposta = document.getElementById('imagemRespostaId')
-        var divCheckBoxPreto = document.getElementById('divCheckBoxPretoId')
-        var divCheckBoxBranco = document.getElementById('divCheckBoxBrancoId')
-        var divCheckBoxPelado = document.getElementById('divCheckBoxPeladoId')
-        var exibirCor = document.getElementById('corEscolhidaId')
-        var divCheckBoxFilhote = document.getElementById('divCheckBoxFilhoteId')
-        var divCheckBoxJovem = document.getElementById('divCheckBoxJovemId')
-        var divCheckBoxAdulto = document.getElementById('divCheckBoxAdultoId')
+        
+        
         var exibiridade = document.getElementById('idadeEscolhidaId')
-        var anuncio = document.getElementById('anuncioId')
+        var procurarReiniciarId = document.getElementById('procurar_reiniciarId')
+        
        
         
 
@@ -143,7 +140,7 @@
         corSalva = [0,0,0,0]
         idadeSalva = [0,0,0,0]
         imagemResposta.src = "GatoDentroDaCaixa.jpg"
-        window.alert("hahahahahha")
+        window.alert("for now it doesn't work, if you want help me call me on twitter @catureba_exe")
     }
     </script>
 </body>
