@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gataria</title>    
+    
+</head>
+<body>
+    <h1>Gataria</h1>
+    <h2>Bem vindo ao Gataria, Seu Site de Busca Por imagens de gatos</h2> 
+    <h3>Escolha como quer a foto do gato</h3>
+    <h4>Cor</h4> 
+    
+    <div id = 'divCheckBoxPretoId'>Preto <input type="checkbox"  onclick="corSalva[0] = definirCor('preto')" name="cor" id="corPretoId"></div>
+    <div id = 'divCheckBoxBrancoId'>Branco <input type="checkbox" onclick="corSalva[1] = definirCor('branco')" name="cor" id="corBrancoId"></div>
+    <div id = 'divCheckBoxPeladoId'>Pelado <input type="checkbox" onclick="corSalva[2] = definirCor('pelado')" name="cor" id="corPeladoId"></div>
+    
+
+
+    <h4>Idade</h4>
+    
+    <div id = 'divCheckBoxFilhoteId'>Filhote <input type="checkbox"  onclick="idadeSalva[0] = definirIdade('filhote')" name="idade" id="idadeFilhoteId"> </div>
+    <div id = 'divCheckBoxJovemId'>Jovem <input type="checkbox" onclick="idadeSalva[1] = definirIdade('jovem')" name="idade" id="idadeJovemId"> </div>
+    <div id = 'divCheckBoxAdultoId'>Adulto <input type="checkbox" onclick="idadeSalva[2] = definirIdade('adulto')" name="idade" id="idadeAdultoId"> </div>
+    <br>
+    <div id="anuncioId"><input type="button" value="Procurar" onclick="procurar(corSalva, idadeSalva)"> <input type="button" value="Reiniciar" onclick="reiniciar()" ></div>
+    
+
+    <div><img src= "GatoDentroDaCaixa.jpg" alt="" id = 'imagemRespostaId'></div> 
+    <h5>Este projeto é um prototipo, ao longo do tempo com o avanço dos meus estudos irei aprimora-lo ou apenas criar novos e melhores</h5>
+    
+    
+    
+    <script>
+        var corSalva = []
+        var idadeSalva = []
+        var imagemResposta = document.getElementById('imagemRespostaId')
+        var divCheckBoxPreto = document.getElementById('divCheckBoxPretoId')
+        var divCheckBoxBranco = document.getElementById('divCheckBoxBrancoId')
+        var divCheckBoxPelado = document.getElementById('divCheckBoxPeladoId')
+        var exibirCor = document.getElementById('corEscolhidaId')
+        var divCheckBoxFilhote = document.getElementById('divCheckBoxFilhoteId')
+        var divCheckBoxJovem = document.getElementById('divCheckBoxJovemId')
+        var divCheckBoxAdulto = document.getElementById('divCheckBoxAdultoId')
+        var exibiridade = document.getElementById('idadeEscolhidaId')
+        var anuncio = document.getElementById('anuncioId')
+       
+        
+
+    function procurar(cor, idade) {
+        
+        if(cor[0] == 'preto'){
+            if(idade[0] == 'filhote'){imagemResposta.src =  "GatoPretoFilhote.jpg"}
+            if(idade[1] == 'jovem'){imagemResposta.src =  "GatoPretoJovem.jpg"}
+            if(idade[2] == 'adulto'){imagemResposta.src =  "GatoPretoAdulto.jpg"}
+        }
+
+        if(cor[1] == 'branco'){
+            if(idade[0] == 'filhote'){imagemResposta.src = "GatoBrancoFilhote.jpg"}
+            if(idade[1] == 'jovem'){imagemResposta.src =  "GatoBrancoJovem.jpg"}
+            if(idade[2] == 'adulto'){imagemResposta.src =  "GatoBrancoAdulto.jpg"}
+            
+        }
+
+        if(cor[2] == 'pelado'){
+            
+            if(idade[0] == 'filhote'){imagemResposta.src =  "GatoPeladoPelado.jpg"}
+            if(idade[1] == 'jovem'){imagemResposta.src =  "GatoPeladoPelado.jpg"}
+            if(idade[2] == 'adulto'){imagemResposta.src =  "GatoPeladoPelado.jpg"}
+        }
+    }
+
+    function definirCor(cor) {
+
+        if(cor == "preto"){
+            if(corSalva[0] == "preto"){
+            corSalva[0] = " "
+            return(corSalva[0])
+            }else{
+            corSalva[0] = "preto"
+            return(corSalva[0])
+            }
+        }
+
+        if(cor == "branco"){
+            if(corSalva[1] == "branco"){
+            corSalva[1] = " "
+            return(corSalva[1])
+            }else{
+            corSalva[1] = "branco"
+            return(corSalva[1])
+            }
+        }
+
+        if(cor == "pelado"){
+            if(corSalva[2] == "peladp"){
+            corSalva[2] = " "
+            return(corSalva[2])
+            }else{
+            corSalva[2] = "pelado"
+            return(corSalva[2])
+            }
+        }
+
+        }
+
+    function definirIdade(idade) {
+            if(idade == "filhote"){
+            if(idadeSalva[0] == "filhote"){
+            idadeSalva[0] = " "
+            return(idadeSalva[0])
+            }else{
+            idadeSalva[0] = "filhote"
+            return(idadeSalva[0])
+            }
+        }
+
+        if(idade == "jovem"){
+            if(idadeSalva[1] == "jovem"){
+            idadeSalva[1] = " "
+            return(idadeSalva[1])
+            }else{
+            idadeSalva[1] = "jovem"
+            return(idadeSalva[1])
+            }
+        }
+
+        if(idade == "adulto"){
+            if(idadeSalva[2] == "adulto"){
+            idadeSalva[2] = " "
+            return(idadeSalva[2])
+            }else{
+            idadeSalva[2] = "adulto"
+            return(idadeSalva[2])
+            }
+        }
+
+        }
+            
+    function reiniciar() {
+        corSalva = [0,0,0,0]
+        idadeSalva = [0,0,0,0]
+        imagemResposta.src = "GatoDentroDaCaixa.jpg"
+        window.alert("hahahahahha")
+    }
+    </script>
+</body>
+</html>
